@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.dotted-loader {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-width: 5px;
+    border-color: rgb(0, 85, 255);
+    border-style: solid solid dotted dotted;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    animation: turn-left 4s linear infinite;
+}
+
+.dotted-loader::before {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-color: rgb(0, 85, 255);
+    border-style: solid dotted;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    animation: turn-right 3s linear infinite;
+}
+
+.dotted-loader::after {
+    content:"";
+    position: absolute;
+    border-width: 5px;
+    border-color:rgb(0, 85, 255);
+    border-style: dotted solid;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    animation: turn 2s linear infinite
+}
+
+@keyframes turn-left {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-1turn);
+    }
+}
+
+@keyframes turn {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+@keyframes turn-right {
+    form {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-1turn);
+    }
+}
